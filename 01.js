@@ -1,14 +1,27 @@
-// For
+// for
+// function getStockSymbols(stocks) {
+//
+//   var symbols = [];
+//   var counter;
+//   var stock;
+//
+//   for(counter = 0; counter < stocks.length; counter++) {
+//     stock = stocks[counter];
+//     symbols.push(stock.symbol);
+//   }
+//
+//   return symbols;
+//
+// }
+
+// forEach
 function getStockSymbols(stocks) {
 
   var symbols = [];
-  var counter;
-  var stock;
 
-  for(counter = 0; counter < stocks.length; counter++) {
-    stock = stocks[counter];
+  stocks.forEach(function(stock) {
     symbols.push(stock.symbol);
-  }
+  });
 
   return symbols;
 
