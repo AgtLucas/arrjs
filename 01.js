@@ -1,6 +1,17 @@
 // For
 function getStockSymbols(stocks) {
 
+  var symbols = [];
+  var counter;
+  var stock;
+
+  for(counter = 0; counter < stocks.length; counter++) {
+    stock = stocks[counter];
+    symbols.push(stock.symbol);
+  }
+
+  return symbols;
+
 }
 
 var symbols = getStockSymbols([
@@ -8,3 +19,5 @@ var symbols = getStockSymbols([
   { symbol: 'TNZ', price: 332.19, volume: 234 },
   { symbol: 'JXJ', price: 162.59, volume: 5323 }
 ]);
+
+console.log(JSON.stringify(symbols));
