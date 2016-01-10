@@ -1,18 +1,18 @@
-// slice();
+// slice()
 var person = {
   name: 'lucas-churchill'
-};
+}
 
 var filters = {
   'deslugify': x => x.replace('-', ' '),
   'uppercase': x => x.toUpperCase()
-};
+}
 
-var input = 'name | deslugify | uppercase';
+var input = 'name | deslugify | uppercase'
 
-var sections = input.split('|').map(x => x.trim());
+var sections = input.split('|').map(x => x.trim())
 
-var ref = person[sections[0]];
+var ref = person[sections[0]]
 
 var output = sections
   .slice(1)
@@ -20,7 +20,7 @@ var output = sections
     if (filters[next]) {
       return filters[next].call(null, prev)
     }
-    return prev;
-  }, ref);
+    return prev
+  }, ref)
 
-console.log(output);
+console.log(output)
